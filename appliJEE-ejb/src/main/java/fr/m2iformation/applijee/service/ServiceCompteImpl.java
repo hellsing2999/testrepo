@@ -21,7 +21,7 @@ import fr.m2iformation.applijee.entity.Compte;
  * NB : jboss doit être paramétré avec l'option -b 0.0.0.0 
  * pour accepter des requêtes provenant d'autres 
  */
-
+//test git dsds
 @Stateless
 @Local
 //@TransactionManagement(TransactionManagementType.CONTAINER) par défaut sur EJB
@@ -40,6 +40,7 @@ public class ServiceCompteImpl implements IServiceCompte {
 	@Override
 	public Compte rechercherCompteParNumero(long numero) {
 		// on délègue au dao.
+		// test git qqgs
 		return daoCompte.getCompteByNumero(numero);
 	}
 
