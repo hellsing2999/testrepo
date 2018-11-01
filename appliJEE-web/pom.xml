@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>fr.m2iformation</groupId>
+    <artifactId>appliJEE</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>appliJEE-web</artifactId>
+  <packaging>war</packaging>
+  <properties>
+  	<failOnMissingWebXml>false</failOnMissingWebXml>
+  </properties>
+  
+  <dependencies>
+			<dependency>
+			<!-- javaee-api est un pack comportant l'api des servlet , jsp , ...... -->
+				<groupId>javax</groupId>
+				<artifactId>javaee-api</artifactId>
+				<version>7.0</version>
+				<scope>provided</scope><!-- deja fourni par le serveur jee (ex:jboss wildfly) -->
+			</dependency>
+			<dependency>
+				<groupId>fr.m2iformation</groupId>
+				<artifactId>appliJEE-ejb</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+				<scope>provided</scope> <!-- la partie EJB prise en charge par le serveur JEE sera fourni au coté web -->
+			</dependency>
+  </dependencies>
+ 
+</project>

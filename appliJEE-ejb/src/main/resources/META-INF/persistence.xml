@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ce fichier peut avoir un fichier généré par l'assistant eclipse -->
+<persistence version="2.1" 
+		xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	 <!-- transaction-type="JTA" avec jboss/EJB3 ou bien "RESOURCE_LOCAL" en version simple -->
+	 <!--  transaction-type="RESOURCE_LOCAL"-->
+	<persistence-unit name="appEJB"  >
+		<!-- Parametrage de la connection à la base de donnée -->
+		<!-- java:/jboss/datasources/CompteDS est configuré dans standalone\configuration\standalone.xml de JBoss WildFly -->
+		<jta-data-source>java:jboss/datasources/MysqlCompteDS</jta-data-source>
+		
+		
+		<!--  <class>fr.m2iformation.applijee.entity.Compte</class>-->
+		
+		<properties>
+		
+		<!-- si la valeur "create" les tables sont crées automatiquement 
+			 démarrage de l'application et l'éventuel fichier import.sql est lancé s'il existe 
+			 pratique en phase de développement MAIS PAS EN PROD -->
+			<property name="hibernate.hbm2ddl.auto" value="create"/>
+			<!--  <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>-->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
+			<property name="hibernate.show_sql" value="true"/>
+		</properties>
+	</persistence-unit>
+</persistence>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Compte</title>
+</head>
+<body>
+	<form action="CompteServlet" method="post">
+		<input type="hidden" name="task" value="rechercherCompte">
+		Numero de compte: <input name="numeroCompte" type="text"><br/>
+		<input type="submit" value="Rechercher compte"><br/>
+	</form>
+	</hr>
+	<form action="CompteServlet" method="post">
+		<input type="hidden" name="task" value="testerCompte">
+		<input type="submit" value="Tester Compte"><br/>
+	</form>
+</body>
+</html>
