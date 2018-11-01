@@ -88,7 +88,7 @@ public class DaoCompteJPA implements IDaoCompte {
 	public void updateCompte(Compte c) {	
 			entityManager.merge(c);	
 	}
-
+	// test git merge
 	@Override
 	public void deleteCompte(Long numero) {
 		Compte c = entityManager.find(Compte.class, numero);
